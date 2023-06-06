@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "motos",
+  "info": {
+    "singularName": "moto",
+    "pluralName": "motos",
+    "displayName": "Moto",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "precio": {
+      "type": "integer"
+    },
+    "modelo": {
+      "type": "string",
+      "required": true
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "modelo"
+    }
+  }
+}
